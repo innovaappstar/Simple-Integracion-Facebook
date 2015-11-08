@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtUsuario"
+        android:textColor="@android:color/white"
+        android:text=""
+        android:layout_above="@+id/profilePicture"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:textSize="24sp"/>
+    <com.facebook.widget.ProfilePictureView
+        android:id="@+id/profilePicture"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/login_button"
+        facebook:preset_size="normal"/>
+    <com.facebook.widget.LoginButton
+        android:id="@+id/login_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        facebook:confirm_logout="false"
+        facebook:fetch_user_info="true"
+        />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/login_button"
+        android:layout_margin="10dp"
+        android:text="Post Estado"
+        android:onClick="onClickFacebook"
+        android:id="@+id/postStatus"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/postStatus"
+        android:text="Post Foto"
+        android:onClick="onClickFacebook"
+        android:id="@+id/postPhoto"/>
+
+
+</RelativeLayout>
